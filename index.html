@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cilicia Nascimento — Teaching Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper:#F8F3E8;
+    --paper-2:#EFE4CF;
+    --ink:#3B3226;
+    --ink-soft:#7C6F5C;
+    --teal:#7C8B65;
+    --teal-deep:#4F5B3E;
+    --amber:#BE7C6B;
+    --amber-soft:#E9CFC4;
+    --sage:#D9C4A8;
+    --line: rgba(59,50,38,0.16);
+    --card:#FDF9F0;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  a{color:var(--teal-deep);}
+
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- background texture: faint scattered colonies ---------- */
+  .petri-bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    opacity:0.55;
+    pointer-events:none;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(239,241,231,0.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 28px;
+  }
+  nav .brand{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:17px;
+  }
+  nav .links{
+    display:flex; gap:22px;
+    font-size:13px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+  nav .links a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:border-color .2s, color .2s;
+  }
+  nav .links a:hover{ color:var(--teal-deep); border-color:var(--teal-deep); }
+  @media (max-width:640px){ nav .links{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:88px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{ position:relative; z-index:2; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px; height:1px;
+    background:var(--teal-deep);
+    display:inline-block;
+  }
+  h1.name{
+    font-size:clamp(40px, 6vw, 64px);
+    line-height:1.02;
+    margin-bottom:14px;
+  }
+  .role{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin-bottom:30px;
+  }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:10px 26px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:20px;
+    max-width:640px;
+  }
+  .hero-meta span{ display:flex; align-items:center; gap:7px; }
+  .dot{ width:5px; height:5px; border-radius:50%; background:var(--amber); display:inline-block; }
+
+  .dish-decor{
+    position:absolute;
+    right:-60px; top:40px;
+    width:420px; height:420px;
+    z-index:1;
+    opacity:0.9;
+  }
+  @media (max-width:860px){ .dish-decor{ display:none; } }
+
+  /* ---------- SECTION shell ---------- */
+  section{ padding:64px 0; border-top:1px solid var(--line); position:relative; }
+  section.first{ border-top:none; }
+  section:not(.first)::before{
+    content:'';
+    position:absolute; top:-9px; left:50%; transform:translateX(-50%);
+    width:34px; height:18px;
+    background-color:var(--paper);
+    background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2034%2018'%3E%3Cg%20fill='none'%20stroke='%23BE7C6B'%20stroke-width='1.1'%3E%3Ccircle%20cx='17'%20cy='5'%20r='3.4'/%3E%3Ccircle%20cx='21.3'%20cy='7.6'%20r='3.4'/%3E%3Ccircle%20cx='19.8'%20cy='12.3'%20r='3.4'/%3E%3Ccircle%20cx='14.2'%20cy='12.3'%20r='3.4'/%3E%3Ccircle%20cx='12.7'%20cy='7.6'%20r='3.4'/%3E%3C/g%3E%3Ccircle%20cx='17'%20cy='9'%20r='1.5'%20fill='%23C9A24A'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:26px 14px;
+  }
+  .section-head{
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom:34px;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--amber);
+    letter-spacing:0.08em;
+  }
+  h2.title{ font-size:29px; }
+
+  .lede{
+    font-size:16px;
+    color:var(--ink-soft);
+    max-width:660px;
+    margin-bottom:8px;
+  }
+
+  /* ---------- SUMMARY ---------- */
+  .summary-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap:48px;
+  }
+  @media (max-width:760px){ .summary-grid{ grid-template-columns:1fr; } }
+  .summary-grid p{ margin:0 0 16px; color:var(--ink-soft); font-size:15.5px; }
+  .summary-grid p:last-child{ margin-bottom:0; }
+
+  .fact-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:22px 24px;
+  }
+  .fact-card h3{ font-size:14px; text-transform:uppercase; letter-spacing:.06em; font-family:'IBM Plex Mono',monospace; color:var(--teal-deep); margin-bottom:14px; font-weight:600;}
+  .fact-row{ display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px dashed var(--line); font-size:13.5px; }
+  .fact-row:last-child{ border-bottom:none; }
+  .fact-row .k{ color:var(--ink-soft); }
+  .fact-row .v{ font-family:'IBM Plex Mono',monospace; text-align:right; }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{ position:relative; padding-left:26px; }
+  .timeline::before{
+    content:'';
+    position:absolute; left:5px; top:6px; bottom:6px;
+    width:1px; background:var(--line);
+  }
+  .t-item{ position:relative; padding-bottom:38px; }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-item::before{
+    content:'';
+    position:absolute; left:-26px; top:5px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--teal-deep);
+  }
+  .t-when{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--amber);
+    text-transform:uppercase; letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .t-role{ font-size:19px; font-family:'Source Serif 4',serif; font-weight:600; margin-bottom:3px;}
+  .t-org{ font-size:14px; color:var(--ink-soft); margin-bottom:10px; }
+  .t-body{ font-size:14.8px; color:var(--ink-soft); max-width:640px; }
+  .t-skills{
+    margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    padding:4px 10px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--teal-deep);
+    background:rgba(47,111,94,0.06);
+  }
+
+  /* ---------- EVALUATION SECTION ---------- */
+  .eval-intro{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:16px; margin-bottom:40px;
+  }
+  .eval-n{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; color:var(--ink-soft);
+    text-align:right;
+  }
+  .eval-n b{ color:var(--ink); font-size:22px; display:block; font-family:'Source Serif 4',serif; }
+
+  .dishes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:48px;
+  }
+  @media (max-width:760px){ .dishes{ grid-template-columns:repeat(2,1fr); } }
+  .dish-card{ text-align:center; }
+  .dish-label{
+    margin-top:14px;
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.4;
+  }
+  .dish-score{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:15px;
+    margin-top:4px;
+    color:var(--teal-deep);
+  }
+
+  .quotes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-bottom:48px;
+  }
+  @media (max-width:700px){ .quotes{ grid-template-columns:1fr; } }
+  .quote-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--amber);
+    padding:18px 22px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .quote-card::before{ content:'\201C'; color:var(--amber); font-family:'Source Serif 4',serif; font-size:22px; margin-right:2px;}
+  .quote-src{
+    display:block; margin-top:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px; color:var(--sage);
+    text-transform:uppercase; letter-spacing:.06em;
+  }
+
+  .theme-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  @media (max-width:700px){ .theme-grid{ grid-template-columns:1fr; } }
+  .theme-card{
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:20px;
+    background:var(--card);
+  }
+  .theme-card h4{
+    font-family:'Source Serif 4',serif; font-size:16px; margin:0 0 8px; font-weight:600;
+    display:flex; align-items:center; gap:8px;
+  }
+  .theme-card p{ margin:0; font-size:13.5px; color:var(--ink-soft); }
+  .theme-tag-strength .dot2{ background:var(--teal); }
+  .theme-tag-growth .dot2{ background:var(--amber); }
+  .dot2{ width:8px; height:8px; border-radius:50%; display:inline-block; }
+
+  .growth-note{
+    margin-top:22px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    background:rgba(207,138,46,0.08);
+    border:1px solid rgba(207,138,46,0.25);
+    padding:14px 18px;
+    border-radius:9px;
+  }
+  .growth-note b{ color:var(--ink); }
+
+  /* ---------- PHILOSOPHY ---------- */
+  .phil-intro{
+    font-family:'Source Serif 4', serif;
+    font-size:21px;
+    line-height:1.55;
+    max-width:700px;
+    color:var(--ink);
+    margin-bottom:40px;
+  }
+  .phil-intro .drop{
+    float:left;
+    font-size:64px;
+    line-height:0.8;
+    padding:8px 10px 0 0;
+    font-weight:600;
+    color:var(--teal-deep);
+  }
+  .principle-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+  }
+  @media (max-width:900px){ .principle-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .principle-grid{ grid-template-columns:1fr; } }
+  .principle-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:3px solid var(--teal);
+    border-radius:9px;
+    padding:20px;
+  }
+  .principle-card h4{
+    font-family:'Source Serif 4',serif; font-size:15.5px; font-weight:600;
+    margin:0 0 10px;
+  }
+  .principle-card p{ margin:0; font-size:13.3px; color:var(--ink-soft); font-style:italic; }
+
+  /* ---------- COURSE ---------- */
+  .course-banner{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:32px;
+    flex-wrap:wrap;
+    margin-bottom:36px;
+  }
+  .course-banner .ctitle{ font-size:26px; margin-bottom:8px; }
+  .course-banner .csub{ color:var(--ink-soft); font-size:14.5px; max-width:520px; }
+  .course-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+
+  .course-bio{
+    background:var(--card); border:1px solid var(--line); border-radius:9px;
+    padding:22px 24px; font-size:14.5px; color:var(--ink-soft);
+    margin-bottom:44px;
+  }
+  .course-bio b{ color:var(--ink); }
+
+  .unit-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+    margin-bottom:44px;
+  }
+  @media (max-width:900px){ .unit-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .unit-grid{ grid-template-columns:1fr; } }
+  .unit-card{
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:16px 16px 18px;
+    background:var(--card);
+  }
+  .unit-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px; color:var(--amber); letter-spacing:.06em;
+  }
+  .unit-title{
+    font-family:'Source Serif 4',serif; font-weight:600; font-size:14.5px;
+    margin:6px 0 8px; line-height:1.25;
+  }
+  .unit-desc{ font-size:12px; color:var(--ink-soft); line-height:1.5; }
+
+  .signature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:48px;
+  }
+  @media (max-width:900px){ .signature-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .signature-grid{ grid-template-columns:1fr; } }
+  .sig-card{
+    padding:18px 4px 0;
+    border-top:1px solid var(--line);
+  }
+  .sig-card h4{
+    font-family:'Source Serif 4',serif; font-size:15px; font-weight:600; margin:0 0 8px;
+  }
+  .sig-card p{ font-size:13px; color:var(--ink-soft); margin:0; }
+
+  .lesson-spot{
+    background:var(--card); border:1px solid var(--line); border-radius:9px;
+    padding:28px 30px;
+  }
+  .lesson-spot-head{
+    display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;
+    margin-bottom:18px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .lesson-spot-head h3{ font-size:19px; margin-bottom:4px; }
+  .lesson-spot-head .sub{ font-size:13px; color:var(--ink-soft); }
+  .lesson-model{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--teal-deep);
+    border:1px solid var(--teal); border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .lesson-sched{ list-style:none; margin:0 0 20px; padding:0; }
+  .lesson-sched li{
+    display:grid; grid-template-columns:78px 1fr; gap:16px;
+    font-size:13.3px; padding:9px 0; border-bottom:1px dashed var(--line);
+  }
+  .lesson-sched li:last-child{ border-bottom:none; }
+  .lesson-sched .time{ font-family:'IBM Plex Mono',monospace; color:var(--amber); font-size:12px; }
+  .lesson-sched .what{ color:var(--ink-soft); }
+  .lesson-sched .what b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- VIDEO ---------- */
+  .video-frame{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:9px;
+    overflow:hidden;
+    background:#1C1410;
+    box-shadow:0 18px 40px -22px rgba(30,42,38,0.35);
+  }
+  .video-link-card{
+    position:relative;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+  }
+  .video-link-card .thumb-wrap{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 */
+    background:linear-gradient(135deg, #241B14, #34281C);
+    overflow:hidden;
+  }
+  .video-link-card .thumb-wrap img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:0.82;
+    transition:opacity .2s, transform .3s;
+  }
+  .video-link-card:hover .thumb-wrap img{ opacity:0.95; transform:scale(1.02); }
+  .play-badge{
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    width:74px; height:74px;
+    border-radius:50%;
+    background:rgba(20,28,25,0.55);
+    border:1.5px solid rgba(255,255,255,0.7);
+    display:flex; align-items:center; justify-content:center;
+    backdrop-filter:blur(2px);
+    transition:transform .2s, background .2s;
+  }
+  .video-link-card:hover .play-badge{ transform:translate(-50%,-50%) scale(1.06); background:rgba(207,138,46,0.75); border-color:#fff; }
+  .play-badge svg{ margin-left:4px; }
+  .video-link-bar{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:16px 20px;
+    background:#1F1712;
+    flex-wrap:wrap;
+  }
+  .video-link-bar .vl-left{ display:flex; align-items:center; gap:12px; }
+  .video-link-bar .yt-icon{ flex:none; }
+  .video-link-bar .vl-title{ color:#F5EFE4; font-family:'Source Serif 4',serif; font-size:15.5px; font-weight:600; }
+  .video-link-bar .vl-sub{ color:#B8A78E; font-family:'IBM Plex Mono',monospace; font-size:11.5px; margin-top:2px; }
+  .video-link-bar .vl-cta{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; color:#F5EFE4;
+    border:1px solid rgba(255,255,255,0.35); border-radius:20px; padding:7px 14px; white-space:nowrap;
+  }
+  .video-link-card:hover .vl-cta{ border-color:var(--amber); color:var(--amber-soft); }
+  .video-caption{
+    display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap;
+    margin-top:16px;
+  }
+  .video-caption .vlabel{ font-size:13.5px; color:var(--ink-soft); max-width:560px; }
+  .video-caption .vmeta{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--sage);
+    text-transform:uppercase; letter-spacing:.06em; white-space:nowrap;
+  }
+  .video-skills{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+
+  /* ---------- EDUCATION / PUBS ---------- */
+  .ed-list, .pub-list{ list-style:none; margin:0; padding:0; }
+  .ed-list li{
+    display:flex; justify-content:space-between; gap:20px;
+    padding:14px 0; border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .ed-list li:last-child{ border-bottom:none; }
+  .ed-main{ }
+  .ed-degree{ font-weight:600; }
+  .ed-org{ color:var(--ink-soft); font-size:13.5px; }
+  .ed-year{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--amber); white-space:nowrap; }
+
+  .pub-list li{
+    padding:16px 0; border-bottom:1px solid var(--line);
+    font-size:14px; color:var(--ink-soft);
+  }
+  .pub-list li:last-child{ border-bottom:none; }
+  .pub-list a{ text-decoration:none; border-bottom:1px dotted var(--teal-deep); }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:56px 0 70px;
+    border-top:1px solid var(--line);
+  }
+  .footer-grid{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;
+  }
+  .footer-cta h3{ font-size:24px; margin-bottom:10px; }
+  .footer-cta p{ color:var(--ink-soft); font-size:14.5px; max-width:420px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--teal-deep); color:#fff;
+    padding:12px 20px; border-radius:9px;
+    font-family:'IBM Plex Mono',monospace; font-size:13px;
+    text-decoration:none;
+    margin-top:6px;
+  }
+  .contact-list{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink-soft); text-align:right; }
+  .contact-list div{ margin-bottom:6px; }
+  .contact-list a{ color:var(--ink-soft); text-decoration:none; }
+  .contact-list a:hover{ color:var(--teal-deep); }
+
+</style>
+</head>
+<body>
+
+<svg class="petri-bg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <g id="bloom-sm">
+      <circle cx="0" cy="-4" r="2.6" fill="none" stroke="#BE7C6B" stroke-width="0.8"/>
+      <circle cx="3.8" cy="-1.2" r="2.6" fill="none" stroke="#BE7C6B" stroke-width="0.8"/>
+      <circle cx="2.3" cy="3.3" r="2.6" fill="none" stroke="#BE7C6B" stroke-width="0.8"/>
+      <circle cx="-2.3" cy="3.3" r="2.6" fill="none" stroke="#BE7C6B" stroke-width="0.8"/>
+      <circle cx="-3.8" cy="-1.2" r="2.6" fill="none" stroke="#BE7C6B" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="1.2" fill="#C9A24A"/>
+    </g>
+    <path id="leaf-sm" d="M0,0 C4,-6 10,-6 13,0 C10,6 4,6 0,0 Z" fill="none" stroke="#7C8B65" stroke-width="0.8"/>
+  </defs>
+  <use href="#bloom-sm" x="90" y="110" opacity="0.55"/>
+  <use href="#leaf-sm" x="105" y="118" opacity="0.5" transform="rotate(25 105 118)"/>
+  <use href="#bloom-sm" x="930" y="200" opacity="0.4"/>
+  <use href="#leaf-sm" x="895" y="215" opacity="0.4" transform="rotate(-15 895 215)"/>
+  <use href="#bloom-sm" x="70" y="690" opacity="0.4"/>
+  <use href="#bloom-sm" x="955" y="810" opacity="0.5"/>
+  <use href="#leaf-sm" x="965" y="795" opacity="0.45" transform="rotate(60 965 795)"/>
+  <use href="#bloom-sm" x="500" y="955" opacity="0.35"/>
+  <use href="#bloom-sm" x="310" y="45" opacity="0.4"/>
+  <use href="#leaf-sm" x="325" y="55" opacity="0.4" transform="rotate(-40 325 55)"/>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="14" height="14" viewBox="0 0 20 20" style="vertical-align:-2px; margin-right:6px;">
+        <g fill="none" stroke="#BE7C6B" stroke-width="1.3">
+          <circle cx="10" cy="6" r="3.6"/><circle cx="13.4" cy="8.6" r="3.6"/><circle cx="12.2" cy="12.7" r="3.6"/><circle cx="7.8" cy="12.7" r="3.6"/><circle cx="6.6" cy="8.6" r="3.6"/>
+        </g>
+        <circle cx="10" cy="9.8" r="1.6" fill="#C9A24A"/>
+      </svg>C. Nascimento
+    </div>
+    <div class="links">
+      <a href="#profile">Profile</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#experience">Experience</a>
+      <a href="#evaluations">Student Feedback</a>
+      <a href="#course">Course Design</a>
+      <a href="#video">Video</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Teaching Portfolio · 2026</div>
+    <h1 class="name">Cilicia<br>Nascimento</h1>
+    <p class="role">Postdoctoral microbiologist and emerging science educator, building a teaching practice around microbiology, molecular biology, and immunology &mdash; grounded in research and shaped by real classroom observation.</p>
+    <div class="hero-meta">
+      <span><span class="dot"></span>Houston, TX</span>
+      <span><span class="dot"></span>Postdoctoral Associate, Baylor College of Medicine</span>
+      <span><span class="dot"></span>PhD in Microbiology, University of São Paulo</span>
+    </div>
+  </div>
+
+  <svg class="dish-decor" viewBox="0 0 400 400" fill="none">
+    <!-- single flowing stem, corner to corner -->
+    <path d="M90,330 C120,290 130,255 150,245 C170,210 200,185 225,160 C255,130 275,105 300,80"
+          stroke="#4F5B3E" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+
+    <!-- leaves along the stem -->
+    <g stroke="#7C8B65" stroke-width="1.2" opacity="0.65" fill="none">
+      <path d="M0,0 C5,-7 13,-7 17,0 C13,7 5,7 0,0 Z" transform="translate(112,308) rotate(35)"/>
+      <path d="M0,0 C5,-7 13,-7 17,0 C13,7 5,7 0,0 Z" transform="translate(168,222) rotate(-25) scale(0.9)"/>
+      <path d="M0,0 C5,-7 13,-7 17,0 C13,7 5,7 0,0 Z" transform="translate(240,140) rotate(-40) scale(0.85)"/>
+      <path d="M0,0 C5,-7 13,-7 17,0 C13,7 5,7 0,0 Z" transform="translate(195,190) rotate(70) scale(0.7)"/>
+    </g>
+
+    <!-- large blossom, top of spray -->
+    <g opacity="0.85" stroke="#BE7C6B" stroke-width="1.4" fill="none">
+      <circle cx="300" cy="68"  r="13"/>
+      <circle cx="311.4" cy="76.3" r="13"/>
+      <circle cx="307.1" cy="89.7" r="13"/>
+      <circle cx="292.9" cy="89.7" r="13"/>
+      <circle cx="288.6" cy="76.3" r="13"/>
+    </g>
+    <circle cx="300" cy="80" r="5" fill="#C9A24A" opacity="0.9"/>
+
+    <!-- medium blossom, mid spray -->
+    <g opacity="0.75" stroke="#BE7C6B" stroke-width="1.3" fill="none">
+      <circle cx="225" cy="150.5" r="10"/>
+      <circle cx="234" cy="157.1" r="10"/>
+      <circle cx="230.6" cy="167.7" r="10"/>
+      <circle cx="219.4" cy="167.7" r="10"/>
+      <circle cx="216" cy="157.1" r="10"/>
+    </g>
+    <circle cx="225" cy="160" r="4" fill="#C9A24A" opacity="0.9"/>
+
+    <!-- small bud, base of spray -->
+    <g opacity="0.65" stroke="#BE7C6B" stroke-width="1.1" fill="none">
+      <circle cx="150" cy="239.3" r="6"/>
+      <circle cx="155.4" cy="243.2" r="6"/>
+      <circle cx="153.4" cy="249.6" r="6"/>
+      <circle cx="146.6" cy="249.6" r="6"/>
+      <circle cx="144.6" cy="243.2" r="6"/>
+    </g>
+    <circle cx="150" cy="245" r="2.5" fill="#C9A24A" opacity="0.85"/>
+  </svg>
+</header>
+
+<section class="first" id="profile">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="title">Profile</h2>
+    </div>
+    <div class="summary-grid">
+      <div>
+        <p>Originally from Brazil, I built the foundation of my scientific career there before moving to the United States in 2025. My path has always run in parallel between research and teaching: alongside my master's and PhD training in microbiology and molecular biology, I mentored junior students and contributed to course instruction alongside my Principal Investigator.</p>
+        <p>I haven't yet led an independent course as primary instructor, but I've accumulated substantial guest-lecturing experience in both Brazil and the United States, and I've built a deliberate practice of observing, reflecting on, and refining how I teach &mdash; most recently through Baylor College of Medicine's Biomedical Educator Certificate and the ACTOR (Acquiring Competencies in Teaching through Observation &amp; Reflection) program.</p>
+        <p>My earlier international experience &mdash; a Fulbright-sponsored year in Rhode Island (2012) and a TOP China scholarship month in Shanghai (2014) &mdash; shaped an early, lasting commitment to education that has stayed central through every stage of my research career.</p>
+      </div>
+      <div class="fact-card">
+        <h3>At a Glance</h3>
+        <div class="fact-row"><span class="k">Guest lectures observed/given</span><span class="v">UH · HCU · Rice</span></div>
+        <div class="fact-row"><span class="k">Grad students mentored</span><span class="v">2</span></div>
+        <div class="fact-row"><span class="k">Undergrads mentored (PhD)</span><span class="v">6</span></div>
+        <div class="fact-row"><span class="k">Teaching program</span><span class="v">ACTOR</span></div>
+        <div class="fact-row"><span class="k">Educator certificate</span><span class="v">Baylor CoM, 2025</span></div>
+        <div class="fact-row"><span class="k">Core subjects</span><span class="v">Microbio · Mol Bio · Immuno</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="title">Teaching Philosophy</h2>
+    </div>
+
+    <p class="phil-intro"><span class="drop">A</span>s an educator, I am deeply committed to fostering an inclusive, engaging, and dynamic learning environment where all students feel valued, respected, and empowered &mdash; a space where every student is welcomed and encouraged to bring their full self into the learning experience.</p>
+
+    <div class="principle-grid">
+      <div class="principle-card">
+        <h4>Inclusive &amp; Empowering</h4>
+        <p>"Every student&mdash;regardless of racial, religious, ethnic, gender, or socioeconomic background&mdash;is welcomed and encouraged to bring their full self into the learning experience."</p>
+      </div>
+      <div class="principle-card">
+        <h4>Curiosity Over Completion</h4>
+        <p>"Learning is a lifelong journey, not a destination... Education should ignite curiosity, inspire critical thinking, and encourage discovery."</p>
+      </div>
+      <div class="principle-card">
+        <h4>Student-Centered &amp; Flexible</h4>
+        <p>"No two students learn in the exact same way" &mdash; met with experiential learning, project-based work, discussion, and technology-enhanced instruction.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Collaborative by Nature</h4>
+        <p>"Science is collaborative by nature" &mdash; students build a supportive community that challenges and inspires each other, and helps shape the course itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="title">Experience &amp; Mentorship</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="t-when">May 2024 &ndash; Present</div>
+        <div class="t-role">Postdoctoral Associate</div>
+        <div class="t-org">Baylor College of Medicine &middot; Houston, TX</div>
+        <div class="t-body">Researching women's health &mdash; one project on Gestational Diabetes Mellitus (GDM) and Group B Streptococcus (GBS) infection, a second on microbe&ndash;microbe interactions in the vaginal microbiome. Alongside the lab work, mentored two graduate students, volunteered across science outreach programs spanning elementary through undergraduate levels, and served as a guest lecturer at the University of Houston and Houston Christian University through the ACTOR program, with lecture observations at Rice University as well.</div>
+        <div class="t-skills">
+          <span class="chip">Mouse infection &amp; tissue collection</span>
+          <span class="chip">ELISA / cytokine analysis</span>
+          <span class="chip">Bacterial transformation</span>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-when">Aug 2019 &ndash; Dec 2023</div>
+        <div class="t-role">PhD, Microbiology</div>
+        <div class="t-org">University of São Paulo &middot; Brazil</div>
+        <div class="t-body">Studied interactions between GBS and probiotic <em>Lactobacillus</em> strains in cell culture, supported by CAPES's Program of Academic Excellence. Mentored six undergraduate students over the course of the degree, and took an active role in the university's Teaching Improvement program &mdash; giving lectures, developing activities, and assisting during lectures and exams for the Cell and Molecular Biology course.</div>
+        <div class="t-skills">
+          <span class="chip">DNA extraction &amp; PCR</span>
+          <span class="chip">Gel electrophoresis</span>
+          <span class="chip">Antibiotic resistance (disc diffusion / MIC)</span>
+          <span class="chip">Bacterial co-culture</span>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-when">2017 &ndash; 2019</div>
+        <div class="t-role">Master's, Microbiology &amp; Clinical Microbiology Specialization</div>
+        <div class="t-org">University of São Paulo &middot; Brazil</div>
+        <div class="t-body">Continued building the microbiological and molecular biology foundation that now underpins graduate-level instruction.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="evaluations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="title">How Students Respond</h2>
+    </div>
+    <p class="lede">Drawn from anonymous peer/student observation forms completed after guest-taught sessions on pathogens and the environment.</p>
+
+    <div class="eval-intro">
+      <div></div>
+      <div class="eval-n"><b>98</b>responses collected</div>
+    </div>
+
+    <div class="dishes">
+      <!-- Dish 1: 83% -->
+      <div class="dish-card">
+        <svg viewBox="0 0 120 120" width="110" height="110">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#E4D5C2" stroke-width="8"/>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#7C8B65" stroke-width="8"
+            stroke-dasharray="326.7" stroke-dashoffset="55.5" stroke-linecap="round"
+            transform="rotate(-90 60 60)"/>
+          <text x="60" y="66" text-anchor="middle" font-family="Source Serif 4, serif" font-size="26" font-weight="600" fill="#3B3226">4.15</text>
+        </svg>
+        <div class="dish-score">83%</div>
+        <div class="dish-label">Objectives clearly stated</div>
+      </div>
+      <!-- Dish 2: 73% -->
+      <div class="dish-card">
+        <svg viewBox="0 0 120 120" width="110" height="110">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#E4D5C2" stroke-width="8"/>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#BE7C6B" stroke-width="8"
+            stroke-dasharray="326.7" stroke-dashoffset="88.2" stroke-linecap="round"
+            transform="rotate(-90 60 60)"/>
+          <text x="60" y="66" text-anchor="middle" font-family="Source Serif 4, serif" font-size="26" font-weight="600" fill="#3B3226">3.65</text>
+        </svg>
+        <div class="dish-score">73%</div>
+        <div class="dish-label">Understood the lecture well</div>
+      </div>
+      <!-- Dish 3: 79% -->
+      <div class="dish-card">
+        <svg viewBox="0 0 120 120" width="110" height="110">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#E4D5C2" stroke-width="8"/>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#7C8B65" stroke-width="8"
+            stroke-dasharray="326.7" stroke-dashoffset="68.6" stroke-linecap="round"
+            transform="rotate(-90 60 60)"/>
+          <text x="60" y="66" text-anchor="middle" font-family="Source Serif 4, serif" font-size="26" font-weight="600" fill="#3B3226">3.94</text>
+        </svg>
+        <div class="dish-score">79%</div>
+        <div class="dish-label">Prepared &amp; interacted well</div>
+      </div>
+      <!-- Dish 4: 72% -->
+      <div class="dish-card">
+        <svg viewBox="0 0 120 120" width="110" height="110">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#E4D5C2" stroke-width="8"/>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#BE7C6B" stroke-width="8"
+            stroke-dasharray="326.7" stroke-dashoffset="91.5" stroke-linecap="round"
+            transform="rotate(-90 60 60)"/>
+          <text x="60" y="66" text-anchor="middle" font-family="Source Serif 4, serif" font-size="26" font-weight="600" fill="#3B3226">3.60</text>
+        </svg>
+        <div class="dish-score">72%</div>
+        <div class="dish-label">Felt comfortable asking questions</div>
+      </div>
+    </div>
+
+    <div class="theme-grid">
+      <div class="theme-card theme-tag-strength">
+        <h4><span class="dot2"></span>Passion &amp; command of subject</h4>
+        <p>The most common word in open-ended feedback: students repeatedly cite confidence and enthusiasm as what made sessions land &mdash; "her passion and expertise," "clearly has a very well understanding of the subject," "knew what they were talking about so it was easier to follow along."</p>
+      </div>
+      <div class="theme-card theme-tag-strength">
+        <h4><span class="dot2"></span>Relatable examples</h4>
+        <p>Pop-culture references, games, and visuals came up often as engagement tools &mdash; students specifically called out anime and TV-show comparisons, colorful diagrams, and real-world examples as what kept them following along outside the material itself.</p>
+      </div>
+      <div class="theme-card theme-tag-growth">
+        <h4><span class="dot2"></span>Pacing</h4>
+        <p>The most frequent piece of constructive feedback: several students asked for a slightly slower pace, while others specifically praised the pacing as "not too fast, not too slow" &mdash; suggesting it varies by session and is a known, addressable lever.</p>
+      </div>
+    </div>
+
+    <div class="growth-note">
+      <b>Reading the pattern:</b> comfort asking questions (72%) is the lowest-scoring dimension, and pacing is the top open-ended comment &mdash; together they point to the same thing: students who are still processing fast-moving material are less likely to speak up. Building in explicit pause points is a small change that plausibly moves both numbers.
+    </div>
+
+    <div class="quotes" style="margin-top:40px;">
+      <div class="quote-card">She constantly asked if we were all caught up or understood what she was trying to get across.<span class="quote-src">Student observer</span></div>
+      <div class="quote-card">Made eye contact with class, caught herself if she was speaking too fast and regulated.<span class="quote-src">Student observer</span></div>
+      <div class="quote-card">I really loved her examples such as the games and anime &mdash; those kept me engaged outside of this lecture.<span class="quote-src">Student observer</span></div>
+      <div class="quote-card">She let us know we can slow her down if we needed to.<span class="quote-src">Student observer</span></div>
+    </div>
+  </div>
+</section>
+<section id="course">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2 class="title">A Course I Built: Microbiology 101</h2>
+    </div>
+
+    <div class="course-banner">
+      <div>
+        <div class="ctitle">Introduction to Microbiology</div>
+        <div class="csub">A full-semester undergraduate course exploring the micro-world &mdash; designed, syllabus and all, from unit structure to grading philosophy to individual lesson plans.</div>
+        <div class="course-tags">
+          <span class="chip">5 units</span>
+          <span class="chip">15-week calendar</span>
+          <span class="chip">Lab + lecture</span>
+          <span class="chip">No science background required</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-bio">
+      <b>Who's teaching it:</b> Cilicia introduces herself to students as a São Paulo native "used to a chaotic life," who fell for microbiology the same way she hopes her students will &mdash; through one undergraduate course that made her think, <i>"this is awesome, I need to know more!"</i> Office hours come with an open invitation to talk hobbies, including her current one: crochet.
+    </div>
+
+    <div class="unit-grid">
+      <div class="unit-card">
+        <div class="unit-num">Unit 1</div>
+        <div class="unit-title">A Microbe Introduction</div>
+        <div class="unit-desc">History of microbiology, microscopy fundamentals, and bacterial cell structure.</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-num">Unit 2</div>
+        <div class="unit-title">Bacterial Functions &amp; Identification</div>
+        <div class="unit-desc">Genetics, metabolism, DNA technology, and hands-on biochemical identification in the lab.</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-num">Unit 3</div>
+        <div class="unit-title">Meet the Microorganisms</div>
+        <div class="unit-desc">Gram-positive/negative bacteria, microbial disease, the human microbiome, and epidemiology.</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-num">Unit 4</div>
+        <div class="unit-title">Applying the Knowledge</div>
+        <div class="unit-desc">System-by-system human infections, taught in part by student groups presenting their own research.</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-num">Unit 5</div>
+        <div class="unit-title">Broadening Our Horizons</div>
+        <div class="unit-desc">Virology, mycology, and environmental microbiology to close out the semester.</div>
+      </div>
+    </div>
+
+    <div class="signature-grid">
+      <div class="sig-card">
+        <h4>"Unit Science Time!"</h4>
+        <p>Every unit closes by reading and discussing a current primary-literature article together &mdash; treating scientific reading as a practiced skill, not an afterthought.</p>
+      </div>
+      <div class="sig-card">
+        <h4>Choose Your Weights</h4>
+        <p>Students pick how their final grade is distributed across activities, quizzes, and the final assignment from four preset weighting options.</p>
+      </div>
+      <div class="sig-card">
+        <h4>Peer-Taught Units</h4>
+        <p>Small groups research a chosen pathogen and teach it to the rest of the class &mdash; then grade each other's presentations using a shared rubric.</p>
+      </div>
+      <div class="sig-card">
+        <h4>Assignment, Your Way</h4>
+        <p>The final assignment can take the form of an essay, presentation, video, lecture, or quiz &mdash; whatever best shows what a student learned.</p>
+      </div>
+    </div>
+
+    <div class="lesson-spot">
+      <div class="lesson-spot-head">
+        <div>
+          <h3>Lesson Spotlight: Bacterial Reproduction &amp; Genetics</h3>
+          <div class="sub">Undergraduate (freshman/sophomore) &middot; Unit 2</div>
+        </div>
+        <span class="lesson-model">5E Instructional Model</span>
+      </div>
+      <ul class="lesson-sched">
+        <li><span class="time">10:30</span><span class="what">Poll Everywhere warm-up to surface prior knowledge, anonymously &mdash; <b>Engage</b></span></li>
+        <li><span class="time">10:40</span><span class="what">Exposition on replication, transcription &amp; translation, with video animations &mdash; <b>Explore</b></span></li>
+        <li><span class="time">11:00</span><span class="what">Roleplay activity: students become DNA polymerase, helicase, and ribosomes, building strands from physical molecule kits &mdash; <b>Explore</b></span></li>
+        <li><span class="time">11:30</span><span class="what">Mentimeter word-bank on "mutation," then small-group work explaining assigned mutation types &mdash; <b>Explain</b></span></li>
+        <li><span class="time">12:05</span><span class="what">Paired analysis of a real article excerpt on a resistance-causing mutation, written up as a short essay &mdash; <b>Evaluate</b></span></li>
+      </ul>
+      <div class="course-tags">
+        <span class="chip">Poll Everywhere</span>
+        <span class="chip">Mentimeter</span>
+        <span class="chip">Roleplay / kinesthetic learning</span>
+        <span class="chip">Primary-literature analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <h2 class="title">Teaching on Camera</h2>
+    </div>
+    <p class="lede">A self-produced teaching video &mdash; shot, cut, and edited independently as part of the teaching portfolio materials.</p>
+
+    <div class="video-frame">
+      <a class="video-link-card" href="https://www.youtube.com/watch?v=iDpxfCQkqZg" target="_blank" rel="noopener">
+        <div class="thumb-wrap">
+          <img src="https://img.youtube.com/vi/iDpxfCQkqZg/hqdefault.jpg" alt="Teaching demo video thumbnail">
+          <div class="play-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#F5EFE4"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-link-bar">
+          <div class="vl-left">
+            <svg class="yt-icon" width="22" height="16" viewBox="0 0 24 17" fill="none">
+              <path d="M23.5 2.6a3 3 0 00-2.1-2.1C19.5 0 12 0 12 0S4.5 0 2.6.5A3 3 0 00.5 2.6 31 31 0 000 8.5a31 31 0 00.5 5.9 3 3 0 002.1 2.1C4.5 17 12 17 12 17s7.5 0 9.4-.5a3 3 0 002.1-2.1 31 31 0 00.5-5.9 31 31 0 00-.5-5.9z" fill="#FF0000"/>
+              <path d="M9.6 12.1V4.9L15.8 8.5z" fill="#fff"/>
+            </svg>
+            <div>
+              <div class="vl-title">Teaching Demo &mdash; watch on YouTube</div>
+              <div class="vl-sub">youtube.com/watch?v=iDpxfCQkqZg</div>
+            </div>
+          </div>
+          <span class="vl-cta">Play video &rarr;</span>
+        </div>
+      </a>
+    </div>
+    <div class="video-caption">
+      <div class="vlabel">Filmed, edited, and paced by Cilicia as a standalone teaching sample &mdash; the same instinct for clarity and structure that shows up in her lesson plans carries into how she cuts a lecture for the screen.</div>
+      <div class="vmeta">Hosted on YouTube</div>
+    </div>
+    <div class="video-skills">
+      <span class="chip">Filming</span>
+      <span class="chip">Video editing</span>
+      <span class="chip">Pacing for retention</span>
+      <span class="chip">Self-produced</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <h2 class="title">Education</h2>
+    </div>
+    <ul class="ed-list">
+      <li>
+        <div class="ed-main"><div class="ed-degree">Biomedical Educator Certificate of Completion</div><div class="ed-org">Baylor College of Medicine, Houston, TX</div></div>
+        <div class="ed-year">2025</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">PhD, Science (Microbiology)</div><div class="ed-org">University of São Paulo, Brazil</div></div>
+        <div class="ed-year">2019&ndash;2023</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">Master's, Science (Microbiology)</div><div class="ed-org">University of São Paulo, Brazil</div></div>
+        <div class="ed-year">2017&ndash;2019</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">Specialization, Clinical Microbiology</div><div class="ed-org">University of São Paulo, Brazil</div></div>
+        <div class="ed-year">2017&ndash;2019</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">Bachelor's, Biomedical Sciences</div><div class="ed-org">São Camilo University, Brazil</div></div>
+        <div class="ed-year">2010&ndash;2015</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">Exchange Program, TOP China (Santander-sponsored)</div><div class="ed-org">Shanghai Jiao Tong University, China</div></div>
+        <div class="ed-year">2014</div>
+      </li>
+      <li>
+        <div class="ed-main"><div class="ed-degree">Exchange Program, Science Without Borders &amp; Fulbright</div><div class="ed-org">Salve Regina University, Newport, RI</div></div>
+        <div class="ed-year">2012</div>
+      </li>
+    </ul>
+
+    <div class="section-head" style="margin-top:56px;">
+      <span class="section-num">08</span>
+      <h2 class="title">Scientific Production</h2>
+    </div>
+    <ul class="pub-list">
+      <li>do Nascimento, C.S., dos Santos, N.F.B., Ferreira, R.C.C. et al. <em>Streptococcus agalactiae in pregnant women in Brazil: prevalence, serotypes, and antibiotic resistance.</em> Braz J Microbiol 50, 943&ndash;952 (2019). <a href="https://doi.org/10.1007/s42770-019-00129-8" target="_blank" rel="noopener">doi.org/10.1007/s42770-019-00129-8</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-cta">
+        <h3>Teaching materials &amp; syllabus</h3>
+        <p>Developed syllabi, class assignments, and a personal teaching video are available on GitHub.</p>
+        <a class="btn" href="https://github.com/cilicia-nascimento/teaching" target="_blank" rel="noopener">View GitHub Portfolio &rarr;</a>
+      </div>
+      <div class="contact-list">
+        <div>Houston, TX</div>
+        <div><a href="tel:+17133072572">(713) 307-2572</a></div>
+        <div><a href="mailto:cilicia.nascimento@mail.com">cilicia.nascimento@mail.com</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
